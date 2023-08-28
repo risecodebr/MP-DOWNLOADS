@@ -16,10 +16,40 @@ namespace MP_DOWNLOADS
         public FormPrincipal()
         {
             InitializeComponent();
-            FormVideos formVideos = new FormVideos();
+            flowLayoutPanel1.VerticalScroll.Visible = true;
+            flowLayoutPanel1.VerticalScroll.Enabled = true;
+            flowLayoutPanel1.VerticalScroll.Value = 0;
+            FormVideoDownload formVideos = new FormVideoDownload();
             formVideos.TopLevel = false;
-            guna2Panel1.Controls.Add(formVideos);
+            flowLayoutPanel1.Controls.Add(formVideos);
+            FormVideoDownload formVideos2 = new FormVideoDownload();
+            formVideos2.TopLevel = false;
+            flowLayoutPanel1.Controls.Add(formVideos2);
+            FormVideoDownload formVideos3 = new FormVideoDownload();
+            formVideos3.TopLevel = false;
+            flowLayoutPanel1.Controls.Add(formVideos3);
+            FormVideoDownload formVideos4 = new FormVideoDownload();
+            formVideos4.TopLevel = false;
+            flowLayoutPanel1.Controls.Add(formVideos4);
+            FormVideoDownload formVideos5 = new FormVideoDownload();
+            formVideos5.TopLevel = false;
+            flowLayoutPanel1.Controls.Add(formVideos5);
+            FormVideoDownload formVideos6 = new FormVideoDownload();
+            formVideos6.TopLevel = false;
+            flowLayoutPanel1.Controls.Add(formVideos6);
+
+            
             formVideos.Show();
+            formVideos2.Show();
+            formVideos3.Show();
+            formVideos4.Show();
+            formVideos5.Show();
+            formVideos6.Show();
+        }
+
+        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            flowLayoutPanel1.VerticalScroll.Value = guna2VScrollBar1.Value;
         }
     }
 }
